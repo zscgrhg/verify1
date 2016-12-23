@@ -1,0 +1,25 @@
+<project name="asm">
+    <target name="verify">
+        <mkdir dir="build"></mkdir>
+        <copy todir="build/classes/main">
+            <fileset dir="a1/bin">
+                <include name="com/example/delta/S*.class"/>
+            </fileset>
+            <fileset dir="a2/bin">
+                <include name="com/example/delta/U*.class"/>
+            </fileset>
+        </copy>
+
+
+    </target>
+    <target name="go">
+        <java classname="com.example.delta.Oops" fork="true">
+            <classpath>
+                <fileset dir="lib" >
+                    <include name="*.jar"/>
+                </fileset>
+                <path location="build"/>
+            </classpath>
+        </java>
+    </target>
+</project>

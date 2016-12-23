@@ -1,0 +1,9 @@
+<project name="a2" default="classes">
+    <target name="classes">
+        <mkdir dir="bin"/>
+        <javac srcdir="src" destdir="bin">
+
+        </javac>
+    </target>
+    <target name="verify"></target>
+</project>
